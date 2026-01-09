@@ -1,4 +1,4 @@
-# 🎥 AI Video Summarization Pipeline
+#  AI Video Summarization Pipeline
 ### Whisper & GPT 기반 영상 요약 백엔드 파이프라인
 
 > 대용량 영상 파일을 업로드하면  
@@ -8,7 +8,7 @@
 
 ---
 
-## 🔗 Project Overview
+##  Project Overview
 
 - **Project Type**: Personal / Backend Project  
 - **Topic**: AI-based Video Summarization Pipeline  
@@ -17,7 +17,7 @@
 
 ---
 
-## 🎯 Project Goal
+##  Project Goal
 
 - 대용량 영상 업로드 및 안정적인 처리
 - 음성 인식(ASR)과 요약을 분리한 **단계별 AI 파이프라인 구축**
@@ -26,7 +26,7 @@
 
 ---
 
-## 🧩 Key Features
+##  Key Features
 
 - **Video Upload API**
   - FastAPI 기반 영상 업로드
@@ -46,7 +46,7 @@
 
 ---
 
-## 🏗 System Architecture
+## System Architecture
 
 ```text
 Client
