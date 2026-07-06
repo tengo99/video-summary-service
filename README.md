@@ -1,48 +1,58 @@
-#  AI Video Summarization Pipeline
-### Whisper & GPT 기반 영상 요약 백엔드 파이프라인
+# AI Video Summarization Pipeline
 
-> 대용량 영상 파일을 업로드하면  
-> 음성을 추출·분할·텍스트화하고,  
-> AI를 활용해 핵심 내용을 자동 요약하는  
-> **AI 영상 요약 파이프라인 프로젝트**
+### Whisper & GPTを活用した動画要約バックエンドパイプライン
 
----
-
-##  Project Overview
-
-- **Project Type**: Personal / Backend Project  
-- **Topic**: AI-based Video Summarization Pipeline  
-- **Core Tech**: FastAPI, Whisper, GPT, ffmpeg  
-- **Focus**: 대용량 영상 처리, 비동기 파이프라인, AI 추론 자동화  
+> 大容量の動画ファイルをアップロードすると、
+> 音声の抽出・分割・文字起こしを行い、
+> AIを活用して動画の要点を自動的に要約する
+> **AI動画要約パイプラインプロジェクト**
 
 ---
 
-##  Project Goal
+## Project Overview
 
-- 대용량 영상 업로드 및 안정적인 처리
-- 음성 인식(ASR)과 요약을 분리한 **단계별 AI 파이프라인 구축**
-- 영상 → 텍스트 → 요약으로 이어지는 자동화 흐름 구현
-- 실제 서비스 적용을 고려한 백엔드 아키텍처 설계
+* **Project Type**: Personal / Backend Project
+* **Topic**: AI-based Video Summarization Pipeline
+* **Core Tech**: FastAPI, Whisper, GPT, ffmpeg
+* **Focus**: 大容量動画処理、非同期パイプライン、AI推論の自動化
 
 ---
 
-##  Key Features
+## Project Goal
 
-- **Video Upload API**
-  - FastAPI 기반 영상 업로드
-  - 대용량 파일 처리 지원
-- **Audio Extraction & Chunking**
-  - ffmpeg를 활용한 영상 음성 추출
-  - 일정 길이 단위로 오디오 분할
-- **Speech-to-Text (ASR)**
-  - OpenAI Whisper 기반 음성 인식
-  - 청크 단위 추론 후 결과 병합
-- **AI Summarization**
-  - GPT API를 활용한 텍스트 요약
-  - 전체 영상 내용을 핵심 위주로 요약
-- **Pipeline Orchestration**
-  - 단계별 처리 상태 관리
-  - 실패 시 재처리 고려
+* 大容量動画の安定したアップロード・処理を実現
+* 音声認識（ASR）と要約処理を分離した**段階的なAIパイプライン**の構築
+* 「動画 → テキスト → 要約」までの自動処理フローを実装
+* 実サービスへの適用を想定したバックエンドアーキテクチャの設計
+
+---
+
+## Key Features
+
+### Video Upload API
+
+* FastAPIを用いた動画アップロードAPI
+* 大容量ファイルのアップロードに対応
+
+### Audio Extraction & Chunking
+
+* ffmpegによる音声抽出
+* 一定時間ごとに音声をチャンクへ分割
+
+### Speech-to-Text (ASR)
+
+* OpenAI Whisperを用いた音声認識
+* チャンク単位で推論を実行し、認識結果を統合
+
+### AI Summarization
+
+* GPT APIを用いたテキスト要約
+* 動画全体の内容を要点中心に要約
+
+### Pipeline Orchestration
+
+* 各処理ステージの状態管理
+* エラー発生時の再実行を考慮した設計
 
 ---
 
@@ -66,3 +76,14 @@ Transcript Merge
 GPT Summarization
   ↓
 Summary Result (S3 / DB)
+```
+## My Role
+
+- FastAPIを用いたREST APIの設計・実装
+- S3を利用した動画ファイル管理
+- ffmpegによる音声抽出・チャンク分割処理の実装
+- Redisを利用したチャンク単位の処理状態管理
+- OpenAI Whisperによる音声認識パイプラインの構築
+- GPT APIを利用した動画要約機能の実装
+- AIパイプライン全体の設計およびバックエンドアーキテクチャの構築
+- AWS（EC2・S3・RDS）を利用したデプロイ・運用
